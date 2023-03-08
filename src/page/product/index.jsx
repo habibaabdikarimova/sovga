@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import c from './style.module.scss';
 
 function Product() {
     return (
-        <div>
+        <div className={c.Product}>
             Product
         </div>
     )

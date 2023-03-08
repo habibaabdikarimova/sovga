@@ -2,7 +2,8 @@ import React from 'react'
 
 function Information() {
     return (
-        <div>information</div>
+        <div>information
+        </div>
     )
 }
 
