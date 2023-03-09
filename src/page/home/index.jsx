@@ -5,8 +5,6 @@ function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <Link to={"/information"} >information</Link>
-            <Link to={"/massage"} >Massage</Link>
         </div>
     )
 }
