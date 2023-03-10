@@ -1,10 +1,15 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import c from "./style.module.scss";
 import { useForm } from "react-hook-form";
 import { useGetData } from "../../utils/hooks/getData";
 import { usePostData } from "../../utils/hooks/postData";
 import { FaTimes } from "react-icons/fa";
+import { Select, Space, Input } from "antd";
+
 function Product() {
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+  };
   const [show, setShow] = useState(false);
   const {
     register,
@@ -20,7 +25,6 @@ function Product() {
   const onSub = (data) => {
     setShow(true);
     postMainData.mutate({
-      id: "230de2ea-7661-4b94-998d-8f1f55bbafdc",
       gender: data?.gender,
       color: data?.color,
       active: data?.active,
@@ -44,6 +48,7 @@ function Product() {
         photoId: "d56be775-280e-4ed2-9417-c962cfc35a92",
       },
     });
+    console.log(data.gender);
     reset();
   };
 
@@ -58,6 +63,7 @@ function Product() {
   return (
     <div className={c.Product}>
       <h1>Product</h1>
+
       <div
         onClick={() => closeModal()}
         className={show ? c.hidden_mode : c.none_form}
@@ -70,27 +76,60 @@ function Product() {
           <FaTimes />
         </div>
 
+        <input type="text" placeholder="gender" />
+        <Space wrap>
+          <Select
+            defaultValue="BOTH"
+            style={{
+              width: 120,
+            }}
+            onChange={handleChange}
+            options={[
+              {
+                value: "BOTH",
+                label: "BOTH",
+              },
+              {
+                value: "MALE",
+                label: "MALE",
+              },
+              {
+                value: "FEMALE",
+                label: "FEMALE",
+              },
+              { ...register("gender", { required: true }) },
+              // {
+              //   value: 'disabled',
+              //   label: 'Disabled',
+              //   disabled: true,
+              // },
+            ]}
+          />
+        </Space>
+
+        {/* {errors.gender && <span>This field is required</span>} */}
         <input
-          type="text"
-          placeholder="gender"
-          {...register("gender", { required: true })}
-        />
-        {errors.gender && <span>This field is required</span>}
-        <input
-          type="text"
+          type="color"
           placeholder="color"
           {...register("color", { required: true })}
         />
-        <input
+
+        {/* <Input
           type="text"
+          placeholder="color"
+          {...register("color", { required: true })}
+        /> */}
+        <input
+          type="boolean"
           placeholder="active"
           {...register("active", { required: true })}
         />
         <input
-          type="text"
+          type="number"
           placeholder="price"
           {...register("price", { required: true })}
         />
+
         <button type="submit">Submit</button>
       </form>
 
