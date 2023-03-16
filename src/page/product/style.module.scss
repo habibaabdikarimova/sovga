@@ -1,4 +1,7 @@
-
+.Product{
+    padding: 5%;
+    text-align: center;
+}
 
 .none_form{
     display: none;
@@ -22,6 +25,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(228, 213, 213);
+}
+.sellect{
+    margin: 0 1.5%;
 }
 
+
+.Procard{
+    border: 2px solid rgb(108, 108, 108);
+    border-radius: 5px;
+    display: flex;
+    margin: 1% 2%;
+    padding: 1% 5%;
+}
+
+.proIn{
+    width: 250px;
+    margin: 5px;
+}
+.table{
+    position: relative;
+    z-index: -10;
+}
+
+.edit{
+    color: rgb(122, 114, 193);
+}
+
+.delate{
+    color: rgb(252, 85, 55);
+}
+
+.creatbtn{
+    margin: 5% 0;
+    width: 150px;
+}

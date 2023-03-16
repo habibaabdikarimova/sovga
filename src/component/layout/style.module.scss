@@ -1,10 +1,13 @@
 .main{
     display: flex;
+    // gap: 2%;
     .left{
         width: 20%;
+        padding: 3%;
     }
 
     .right{
-        width: 80%;
+        width: 70%;
+        padding: 3%;
     }
 }

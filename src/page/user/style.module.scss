@@ -1,0 +1,17 @@
+.User{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // background-color: aqua;
+    gap: 5%;
+    .card{
+        // background-color: brown;
+        padding: 5% 7%;
+        border: 2px solid rgb(126, 125, 125);
+        border-radius: 5px;
+    }
+}
+
+.Users{
+    text-align: center;
+    margin: 5%;
+}

@@ -27,11 +27,14 @@
         line-height: 20px;
         color: #808191;
         text-decoration: none;
-        padding: 5%;
+        padding: 5% 10%;
         margin: 10%;
        
         &:hover{
             background-color: aqua;
+        }
+        &:focus{
+            background-color: rgb(98, 190, 190);
         }
     }
 }

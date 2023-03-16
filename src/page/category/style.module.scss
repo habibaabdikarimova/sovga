@@ -1,0 +1,31 @@
+.table{
+        display: flex;
+        border: 2px solid rgb(142, 141, 141);
+        width: 600px;
+        justify-content: space-between;
+        padding: 2% 5%;
+        margin: 1% 2%;
+        border-radius: 5px;
+        .leftcat{
+            display: flex;
+            div{
+                margin: 0 10px;
+            }
+        }
+}
+
+.category{
+    text-align: center;
+}
+
+.edit{
+    color: rgb(122, 114, 193);
+}
+
+.delate{
+    color: rgb(252, 85, 55);
+}
+
+.creatcat{
+    margin: 5% 0;
+}
